@@ -11,8 +11,7 @@ matlab;
 ### Introduction: 
 The algorithm is implemented by matlab.  You need to install the matlab version used in this experiment is 9.11.0.1837725 (R2021b) Update 2.  The experimental data are anno omics data.  The steps are as follows：
 
-
-######The possible range of parameter values..
+###### The possible range of parameter values.  
 > eta_range = [0,1,2,3,4,5];
 > K_range = [50,100,150];
 > delta_range = [0.0001,0.001,0.01,0.1,1];
