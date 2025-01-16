@@ -11,18 +11,18 @@ matlab;
 ### Introduction: 
 The algorithm is implemented by matlab.  You need to install the matlab version used in this experiment is 9.11.0.1837725 (R2021b) Update 2.  The experimental data are anno omics data.  The steps are as follows：
 
-###### The possible range of parameter values.  
+##### The possible range of parameter values.  
 > eta_range = [0,1,2,3,4,5];
 > K_range = [50,100,150];
 > delta_range = [0.0001,0.001,0.01,0.1,1];
 > beta_range = [0.0001,0.001,0.01,0.1,1];
 > r_range = [0,1,2,3,4,5];
 > alpha1_range = [0.01,0.1,1,10,100,200,300];
-###### Import PLNMFG algorithms from data sources.  
+##### Import PLNMFG algorithms from data sources.  
 > load('anno.mat'); 
-###### Load the model.
+##### Load the model.
 > [Y,Q,C,G,U] = PLNMFG(X, gt, option);
-##### Perform k-means clustering on G..
+##### Perform k-means clustering on G.
 > clusterLabels = kmeans(G', numClust);
 ##### Load evaluation indicators.
 > accuracy = sum(permutedLabels == gt) / length(gt);
