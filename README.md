@@ -22,6 +22,8 @@ The algorithm is implemented by matlab.  You need to install the matlab version 
 > load('anno.mat'); 
 ###### Load the model.
 > [Y,Q,C,G,U] = PLNMFG(X, gt, option);
+##### Perform k-means clustering on G..
+> clusterLabels = kmeans(G', numClust);
 ##### Load evaluation indicators.
 > accuracy = sum(permutedLabels == gt) / length(gt);
 > nmi = compute_NMI(gt, permutedLabels);
